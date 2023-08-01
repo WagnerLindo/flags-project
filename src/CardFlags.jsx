@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { useFetchData } from "./Fetch";
 
 const CardFlagsStyled = styled.div`
   width: 100%;

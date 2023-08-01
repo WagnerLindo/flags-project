@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 const HeaderStyled = styled.div`

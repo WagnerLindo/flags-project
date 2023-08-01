@@ -3,7 +3,6 @@ import Navbar from "./Navbar";
 import "./App.css";
 import ContainerFlags from "./CardFlags";
 import { useFetchData } from "./Fetch";
-import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import SkeletonCard from "./skeleton";
 import styled from "styled-components";

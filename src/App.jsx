@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Header from "./header";
 import "./App.css";
-import { useFetchData } from "./Fetch";
 import "react-loading-skeleton/dist/skeleton.css";
 
 import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";

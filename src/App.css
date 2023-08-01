@@ -2,3 +2,24 @@
   font-family: "Nunito Sans", sans-serif;
   width: 100%;
 }
+body {
+  background-color: var(--container-background);
+}
+body[data-theme="light"] {
+  --header-background: #fff;
+  --header-text: #000;
+  --container-background: #fafafa;
+  --text--hover: #0c0cb7;
+  --cards-background: #fff;
+  --cards-text: #888a8b;
+  --text-back: #3a2953;
+}
+body[data-theme="dark"] {
+  --header-background: #2b3743;
+  --header-text: #fff;
+  --container-background: #212c36;
+  --text--hover: #2ad3cd;
+  --cards-background: #2b3743;
+  --cards-text: #fafafa;
+  --text-back: #fafafa;
+}

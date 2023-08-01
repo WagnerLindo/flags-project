@@ -6,14 +6,14 @@ const CardFlagsStyled = styled.div`
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0px 10px 10px rgba(72, 84, 159, 0.25);
-  color: black;
+  color: var(--header-text);
   .flagCard__wraper {
+    background: var(--cards-background);
     position: relative;
     width: 100%;
     cursor: pointer;
   }
   .flagCard__wraper:hover {
-    background-color: white;
     opacity: 0.9;
     transform: scale3d(1.1, 1.1, 1.1);
     transition: transform 1s ease, -webkit-transform 1s ease;
@@ -70,7 +70,7 @@ function CountryCard({ img, countryName, population, region, capital }) {
 }
 
 const ContainerFlagsStyled = styled.div`
-  background: #fafafa;
+  background: var(--container-background);
   padding: 20px 70px;
   .container__wraper {
     display: grid;

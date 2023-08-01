@@ -4,16 +4,15 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
 const DetailsContainer = styled.div`
-  background: #fafafa;
+  background: var(--container-background);
   padding: 30px 40px;
   width: 100%;
-
+  color: var(--header-text);
   .details__wraper {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
-
   .flag__img {
     aspect-ratio: 4/3;
     margin-bottom: 40px;
@@ -47,9 +46,10 @@ const DetailsContainer = styled.div`
     flex-wrap: wrap;
   }
   .toOtherCountry {
+    background: var(--cards-background);
     border-radius: 6px;
     border: 1px solid transparent;
-    color: blue;
+    color: var(--text--hover);
     font-weight: 300;
     font-size: 18px;
     padding: 10px 30px;
@@ -58,7 +58,7 @@ const DetailsContainer = styled.div`
   .toOtherCountry:hover {
     transform: scale3d(1.07, 1.07, 1.07);
     transition: 0.4s;
-    border: 1px solid blue;
+    border: 1px solid var(--text--hover);
   }
   .toBack {
     display: flex;
@@ -66,13 +66,14 @@ const DetailsContainer = styled.div`
     max-width: 180px;
   }
   .btnBack {
+    background: var(--cards-background);
     display: flex;
     justify-content: center;
     border: 1px solid transparent;
     gap: 30px;
     border-radius: 6px;
     width: 100%;
-    color: #3a2953;
+    color: var(--text-back);
     font-weight: 600;
     font-size: 20px;
     padding: 10px;
@@ -80,7 +81,7 @@ const DetailsContainer = styled.div`
   }
   .btnBack:hover {
     transform: scale3d(1.08, 1.03, 1.05);
-    border: 1px solid #3a2953;
+    border: 1px solid var(--text-back);
     transition: 0.4s;
   }
   @media screen and (min-width: 640px) {

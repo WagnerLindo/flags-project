@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React, { useState } from "react";
 
 const NavbarStyled = styled.div`
-  background: #fafafa;
+  background: var(--container-background);
   width: 100%;
   padding: 45px 30px;
   .search__container {
@@ -13,6 +13,7 @@ const NavbarStyled = styled.div`
     box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
   }
   .input__search {
+    background: var(--cards-background);
     border-radius: 6px;
     width: 100%;
     padding: 18px 60px;
@@ -20,7 +21,7 @@ const NavbarStyled = styled.div`
     font-weight: 300;
     border: none;
     transition: 0.4s;
-    color: black;
+    color: var(--header-text);
   }
   .input__search::placeholder {
     color: #888a8b;
@@ -59,6 +60,8 @@ const NavbarStyled = styled.div`
 const DropdownContainerStyled = styled.div`
   width: 60%;
   background: transparent;
+  background: var(--cards-background);
+
   position: relative;
   @media screen and (min-width: 1280px) {
     width: 20%;
@@ -66,14 +69,14 @@ const DropdownContainerStyled = styled.div`
 `;
 const DropdownButtonStyled = styled.button`
   width: 100%;
-  background: white;
+  background: var(--cards-background);
   box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
   border-radius: 6px;
   padding: 18px 30px;
   font-family: "Nunito Sans", sans-serif;
   font-size: 14px;
   font-weight: 300;
-  color: #888a8b;
+  color: var(--cards-text);
   border: none;
   transition: 0.4s;
   display: flex;
@@ -98,10 +101,9 @@ const DropdownButtonStyled = styled.button`
 const DropdownListStyled = styled.div`
   margin-block-start: 10px;
   width: 100%;
-  background: white;
+  background: var(--cards-background);
   border-radius: 6px;
   padding: 18px 30px;
-  color: #888a8b;
   border: none;
   transition: 0.4s;
   box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
@@ -112,6 +114,7 @@ const DropdownListStyled = styled.div`
   z-index: 10;
 
   .dropdown__option {
+    color: var(--cards-text);
     padding: 5px 0px;
     font-family: "Nunito Sans", sans-serif;
     font-weight: 300;
@@ -123,7 +126,7 @@ const DropdownListStyled = styled.div`
     text-transform: capitalize;
   }
   .dropdown__option:hover {
-    color: blue;
+    color: var(--text--hover);
     transform: scale3d(1.02, 1.02, 1.02);
     transition: 0.4s;
   }

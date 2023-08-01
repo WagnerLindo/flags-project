@@ -8,6 +8,8 @@ import styled from "styled-components";
 
 const CardSkeletonStyled = styled.div`
   width: 100%;
+  margin: auto;
+  max-width: 768px;
   background: #fafafa;
   padding: 70px;
   overflow: hidden;
@@ -15,28 +17,29 @@ const CardSkeletonStyled = styled.div`
   grid-template-columns: auto;
 
   @media screen and (min-width: 640px) {
-    padding-inline: 120px;
+    /* padding-inline: 120px; */
   }
   @media screen and (min-width: 768px) {
-    padding-inline: 170px;
+    /* padding-inline: 170px; */
   }
   @media screen and (min-width: 980px) {
-    padding-inline: 60px;
+    /* padding-inline: 60px; */
     grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
   @media screen and (min-width: 1024px) {
+    max-width: 1200px;
     padding-inline: 90px;
     gap: 50px;
   }
   @media screen and (min-width: 1280px) {
-    padding-inline: 100px;
+    /* padding-inline: 100px; */
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     justify-items: center;
   }
   @media screen and (min-width: 1440px) {
-    padding-inline: 140px;
+    /* padding-inline: 140px; */
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     gap: 30px;

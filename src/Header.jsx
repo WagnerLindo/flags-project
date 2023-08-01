@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import "react-loading-skeleton/dist/skeleton.css";
+import { useEffect, useState } from "react";
 
 const HeaderStyled = styled.div`
-  background: white;
+  background: var(--header-background);
   width: 100%;
   height: 80px;
   display: flex;
@@ -10,12 +11,12 @@ const HeaderStyled = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px 25px;
-  color: black;
+  color: var(--header-text);
   font-weight: 800;
   font-size: 10px;
 
   .buttonText {
-    color: black;
+    color: var(--header-text);
     font-family: "Nunito Sans", sans-serif;
     font-weight: 600;
     display: flex;
@@ -28,7 +29,7 @@ const HeaderStyled = styled.div`
     cursor: pointer;
   }
   .buttonText:hover {
-    background: #e9e8e8;
+    opacity: 0.9;
     border-radius: 10px;
   }
   .buttonIcon {
@@ -48,12 +49,31 @@ const HeaderStyled = styled.div`
 `;
 
 function Header() {
+  const [theme, setTheme] = useState("light");
+  console.log(theme);
+
+  const nextTheme = theme === "light" ? "dark" : "light";
+  useEffect(() => {
+    document.body.dataset.theme = theme;
+  }, [theme]);
   return (
     <HeaderStyled>
       <h1>{"Where in the world?"}</h1>
-      <button className="buttonText">
-        <img className="buttonIcon" src="/icons/dark-icon.svg" alt="" />
-        <span>Dark mode</span>
+      <button
+        className="buttonText"
+        onClick={() => {
+          setTheme(nextTheme);
+        }}
+      >
+        <img
+          className="buttonIcon"
+          src={
+            theme === "light" ? "/icons/dark-icon.svg" : "/icons/light-icon.svg"
+          }
+          alt=""
+        />
+
+        <span>{theme === "light" ? "Dark Mode" : "Light Mode"}</span>
       </button>
     </HeaderStyled>
   );

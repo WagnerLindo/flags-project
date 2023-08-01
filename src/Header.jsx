@@ -52,11 +52,7 @@ function Header() {
     <HeaderStyled>
       <h1>{"Where in the world?"}</h1>
       <button className="buttonText">
-        <img
-          className="buttonIcon"
-          src="../public/icons/dark-icon.svg"
-          alt=""
-        />
+        <img className="buttonIcon" src="/icons/dark-icon.svg" alt="" />
         <span>Dark mode</span>
       </button>
     </HeaderStyled>

@@ -113,11 +113,7 @@ function Home() {
       )}
       {isError && (
         <ContainerError className="errorContainer">
-          <img
-            className="imgProblem"
-            src="../public/icons/error-icon.svg"
-            alt=""
-          />{" "}
+          <img className="imgProblem" src="/icons/error-icon.svg" alt="" />{" "}
           <span className="upss">UPSS!!</span>
           <span className="problem"> THERE WAS A PROBLEM</span>
           <span>Try again later.</span>

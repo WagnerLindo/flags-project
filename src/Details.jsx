@@ -152,7 +152,7 @@ function DetailsOfCountry({
       <DetailsContainer>
         <Link className="toBack" href="" to={`/`}>
           <div className="btnBack">
-            <img src="../public/icons/backArrow-icon.svg" alt="" /> Back
+            <img src="/icons/backArrow-icon.svg" alt="" /> Back
           </div>
         </Link>
         <div className="details__wraper">

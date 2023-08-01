@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Navbar from "./Navbar";
-import "./App.css";
 import ContainerFlags from "./CardFlags";
 import { useFetchData } from "./Fetch";
 import "react-loading-skeleton/dist/skeleton.css";

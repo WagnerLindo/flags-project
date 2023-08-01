@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Header from "./header";
+import Header from "./Header";
 import "./App.css";
 import "react-loading-skeleton/dist/skeleton.css";
 

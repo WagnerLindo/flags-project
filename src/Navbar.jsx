@@ -186,7 +186,7 @@ function DropdownButton({ selectedOption, setSelectedOption }) {
           </span>
           <img
             className="icon__dropwdown"
-            src="./public/icons/arrowdown-icon.svg"
+            src="/icons/arrowdown-icon.svg"
             alt=""
           />
         </DropdownButtonStyled>
@@ -222,11 +222,7 @@ function Navbar({
   return (
     <NavbarStyled>
       <form className="search__container">
-        <img
-          className="icon__search"
-          src="./public/icons/search-icon.svg"
-          alt=""
-        />
+        <img className="icon__search" src="/icons/search-icon.svg" alt="" />
         <SearchInput searchText={searchText} setSearchText={setSearchText} />
       </form>
       <DropdownButton

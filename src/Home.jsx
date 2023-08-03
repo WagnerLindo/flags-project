@@ -72,6 +72,17 @@ const ContainerError = styled.div`
   }
 `;
 
+export const Error = () => {
+  return (
+    <ContainerError className="errorContainer">
+      <img className="imgProblem" src="/icons/error-icon.svg" alt="" />{" "}
+      <span className="upss">UPSS!!</span>
+      <span className="problem"> THERE WAS A PROBLEM</span>
+      <span>Try again later.</span>
+    </ContainerError>
+  );
+};
+
 function Home() {
   const [selectedOption, setSelectedOption] = useState("all"); // el estado debe comenzar con todos los paises//
   const [searchText, setSearchText] = useState("");
@@ -103,6 +114,7 @@ function Home() {
           <SkeletonCard cards={8} />
         </CardSkeletonStyled>
       )}
+
       {isSuccess && (
         <>
           <Navbar
@@ -114,14 +126,7 @@ function Home() {
           <ContainerFlags countries={countries}></ContainerFlags>
         </>
       )}
-      {isError && (
-        <ContainerError className="errorContainer">
-          <img className="imgProblem" src="/icons/error-icon.svg" alt="" />{" "}
-          <span className="upss">UPSS!!</span>
-          <span className="problem"> THERE WAS A PROBLEM</span>
-          <span>Try again later.</span>
-        </ContainerError>
-      )}
+      {isError && <Error />}
     </>
   );
 }

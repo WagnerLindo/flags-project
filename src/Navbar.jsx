@@ -131,7 +131,7 @@ const DropdownListStyled = styled.div`
     transition: 0.4s;
   }
 `;
-function debounce(func, delay) {
+function Debounce(func, delay) {
   let timerId;
   return function (...args) {
     clearTimeout(timerId);
@@ -146,15 +146,19 @@ function SearchInput({ searchText, setSearchText }) {
       event.preventDefault();
     }
   };
-  const debouncedSetSearchText = debounce((value) => {
-    setSearchText(value);
-  }, 2000); // Ajusta el valor del retardo según tus necesidades
-
   const handleChange = (event) => {
     const { value } = event.target;
     setDebouncedSearchText(value);
     debouncedSetSearchText(value);
   };
+  // const handleChange = (event) => {
+  //   const searchText = event.target.value;
+  //   setSearchText(searchText);
+  //   debouncedSetSearchText(value);
+  // };
+  const debouncedSetSearchText = Debounce((value) => {
+    setSearchText(value);
+  }, 2000); // Ajusta el valor del retardo según tus necesidades
   return (
     <>
       <input

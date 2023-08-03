@@ -50,7 +50,6 @@ const HeaderStyled = styled.div`
 
 function Header() {
   const [theme, setTheme] = useState("light");
-  console.log(theme);
 
   const nextTheme = theme === "light" ? "dark" : "light";
   useEffect(() => {
